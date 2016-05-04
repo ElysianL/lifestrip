@@ -1,6 +1,0 @@
-body{ background: #fff; }
-.strip{ position: relative; transition:All 1s ease-in; -webkit-transition:All 1s ease-in; -moz-transition:All 1s ease-in; -o-transition:All 1s ease-in;  }
-.strip .pic{ position: absolute; top: 100px; left: 100px; transition:All 1s ease-in; -webkit-transition:All 1s ease-in; -moz-transition:All 1s ease-in; -o-transition:All 1s ease-in; }
-.strip .text{ position: absolute; top: -50px; left: -160px; z-index: 100; }
-.active{ transform:scale(100); -webkit-transform:scale(100); -moz-transform:scale(100); -o-transform:scale(100); -ms-transform:scale(100); }
-

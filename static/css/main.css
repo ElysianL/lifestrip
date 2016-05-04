@@ -16,7 +16,13 @@
 html { height: 100%; }
 body { background: #f7f4eb; height: 100%; }
 
-.hd { height: 240px; background: #f2f2f2; text-align: center; color: #393946; }
+/*.strip .modal-bg { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 1000; background: #000; opacity: 0.6; }
+.strip .modal-container { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 2000; }*/
+.strip .modal-box { position: absolute; z-index: 2000; transition:All 1s ease-in; -webkit-transition:All 1s ease-in; -moz-transition:All 1s ease-in; -o-transition:All 1s ease-in; }
+.strip .modal-box .pic { position: absolute; top: -700px; left: -700px;}
+/*.strip .modal-box .text { position: absolute; top: 140px; left: 140px; }*/
+
+.hd { height: 280px; background: #f2f2f2; text-align: center; color: #393946; }
 .hd .title { width: 508px; margin: 0 auto; }
 .hd .title .sub { font-size: 30px; }
 .hd .title .main { font-size: 46px; margin: 30px 20px 16px; }
@@ -27,6 +33,9 @@ body { background: #f7f4eb; height: 100%; }
 .hd .sub-title .text { position: absolute; top:0; left:0; right: 0; margin: auto; width: 300px; background: #f2f2f2; font-size: 20px; }
 .hd .sub-title .text p { line-height: 40px; }
 .hd .note { margin: auto; font-size: 16px; width: 560px; }
+.hd .button .return { display: inline-block; width: 200px; height: 40px; line-height: 40px; text-align: center; background: #ccc;border-radius: 3px;margin: 10px 0; transition:All 4s; -webkit-transition:All 4s; -moz-transition:All 4s; -o-transition:All 4s; }
+.hd .button .noshow { background:#f2f2f2!important; color: #f2f2f2!important;  }
+.hd .button .point { cursor:default; }
 /*.hd .sign { margin: 40px auto 14px; width: 882px; text-align: center; text-align: 16px; }
 .hd .sign .wrapper { height: 14px; }
 .hd .sign .explain { margin: 0 20px 0 0; }

@@ -1,12 +1,16 @@
 $(function() {
 	var home = location.href,
 		param = location.search;
-	if(!param) {
-		addStyle();
-		window.onload = function() {
+	if (!param) {
+		$('body').on('click', '.J-change', function() {
+			$('.strip').hide();
+			addStyle();
 			move();
-		};
+		});
+	} else {
+		$('.strip').hide();
 	}
+	
 	
 	$('body').on('click', '.c1', function() {
 		var $ele = $('.c1');
@@ -40,7 +44,21 @@ $(function() {
 		} else {
 			location.href = home + '?first=false';
 		}
-	});;
+	});
+	$(document).mousemove(function(e) {
+		var xx = e.pageX - 800,
+			yy = e.pageY - 500;
+		$('.strip .modal-box').css({
+			'top':yy + 'px',
+			'left':xx + 'px',
+			'position':'absolute',
+	 		'transition':'All 1s',
+	 		' -webkit-transition':'All 1s',
+	 		'-moz-transition':'All 1s',
+	 		' -o-transition':'All 1s'
+	 	});
+
+	});
 	function move() {
 		$('.main1').addClass('active1');
     	$('.main2').addClass('active2');
@@ -182,9 +200,7 @@ $(function() {
 
 	}
 	function showReturn() {
-		//$('.line').removeClass('dispear');
-		
-		$('.return').removeClass('point').attr('cursor', 'pointer').removeClass('dispear');
+		$('.return').removeClass('point').attr('cursor', 'pointer').removeClass('noshow');
 	}
 	function allAnimate(obj) {
 		showAnimate($(obj));
